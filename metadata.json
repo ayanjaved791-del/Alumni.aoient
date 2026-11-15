@@ -1,0 +1,6 @@
+{
+  "name": "Saylani AlumniLink Followers Leaderboard",
+  "description": "Live leaderboard, analytics, and automated public profile discovery for Saylani AlumniLink users ranked by AlumniLink follower count.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
