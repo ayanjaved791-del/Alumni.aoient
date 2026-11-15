@@ -14,7 +14,9 @@ import type {
 } from './types.ts';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
-const STORE_PATH = path.join(DATA_DIR, 'alumni_store.json');
+const SEED_PATH = path.join(DATA_DIR, 'alumni_store.json');
+const TMP_PATH = path.join('/tmp', 'alumni_store.json');
+const IS_SERVERLESS = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NETLIFY);
 
 const DEFAULT_FEATURED_USERNAMES = ['aoient', 'moosa', 'saifullahkhan', '4hmaadd'];
 
@@ -44,33 +46,38 @@ function createInitialStore(): StoreSchema {
 class StoreManager {
   private data: StoreSchema;
   private writePending = false;
+  private writablePath: string = IS_SERVERLESS ? TMP_PATH : SEED_PATH;
 
   constructor() {
     this.data = this.loadFromDisk();
   }
 
+  private normalizeStore(parsed: StoreSchema): StoreSchema {
+    if (
+      !Array.isArray(parsed.featuredUsernames) ||
+      parsed.featuredUsernames.length === 0 ||
+      JSON.stringify(parsed.featuredUsernames) ===
+        JSON.stringify(['moosa', 'saifullahkhan', 'aoient', '4hmaadd'])
+    ) {
+      parsed.featuredUsernames = [...DEFAULT_FEATURED_USERNAMES];
+    }
+    return parsed;
+  }
+
   private loadFromDisk(): StoreSchema {
-    try {
-      if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
-      }
-      if (fs.existsSync(STORE_PATH)) {
-        const raw = fs.readFileSync(STORE_PATH, 'utf-8');
-        const parsed = JSON.parse(raw) as StoreSchema;
-        if (parsed && Array.isArray(parsed.alumni)) {
-          if (
-            !Array.isArray(parsed.featuredUsernames) ||
-            parsed.featuredUsernames.length === 0 ||
-            JSON.stringify(parsed.featuredUsernames) ===
-              JSON.stringify(['moosa', 'saifullahkhan', 'aoient', '4hmaadd'])
-          ) {
-            parsed.featuredUsernames = [...DEFAULT_FEATURED_USERNAMES];
+    const candidates = IS_SERVERLESS ? [TMP_PATH, SEED_PATH] : [SEED_PATH, TMP_PATH];
+    for (const candidate of candidates) {
+      try {
+        if (fs.existsSync(candidate)) {
+          const raw = fs.readFileSync(candidate, 'utf-8');
+          const parsed = JSON.parse(raw) as StoreSchema;
+          if (parsed && Array.isArray(parsed.alumni)) {
+            return this.normalizeStore(parsed);
           }
-          return parsed;
         }
+      } catch (err) {
+        console.error(`[store] Failed to read ${candidate}:`, err);
       }
-    } catch (err) {
-      console.error('[store] Failed to load store from disk, initializing fresh store:', err);
     }
     const fresh = createInitialStore();
     this.saveToDisk(fresh);
@@ -79,14 +86,25 @@ class StoreManager {
 
   private saveToDisk(target: StoreSchema = this.data): void {
     try {
-      if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
+      const dir = path.dirname(this.writablePath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
       }
-      const tempPath = `${STORE_PATH}.tmp`;
+      const tempPath = `${this.writablePath}.tmp`;
       fs.writeFileSync(tempPath, JSON.stringify(target, null, 2), 'utf-8');
-      fs.renameSync(tempPath, STORE_PATH);
-    } catch (err) {
-      console.error('[store] Failed to persist store:', err);
+      fs.renameSync(tempPath, this.writablePath);
+    } catch {
+      // Fallback to /tmp if workspace data directory is read-only
+      if (this.writablePath !== TMP_PATH) {
+        this.writablePath = TMP_PATH;
+        try {
+          const tempPath = `${TMP_PATH}.tmp`;
+          fs.writeFileSync(tempPath, JSON.stringify(target, null, 2), 'utf-8');
+          fs.renameSync(tempPath, TMP_PATH);
+        } catch (err) {
+          console.error('[store] Failed to persist store to /tmp:', err);
+        }
+      }
     }
   }
 

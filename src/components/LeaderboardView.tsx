@@ -156,7 +156,7 @@ export function LeaderboardView({
                 type="search"
                 value={filters.search}
                 onChange={(e) => onFilterChange({ search: e.target.value, page: 1 })}
-                placeholder="Search name, @username, bio..."
+                placeholder="Search name or @username..."
                 aria-label="Search alumni profiles"
                 className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-zinc-950 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
               />

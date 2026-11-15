@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sitemapTotalDiscovered": 3168,
-  "lastSuccessfulSyncAt": "2026-11-15T20:49:54.501Z",
+  "lastSuccessfulSyncAt": "2026-11-15T21:08:23.490Z",
   "robotsAllowed": true,
   "alumni": [
     {
@@ -19,8 +19,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.660Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.627Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "b0de99b1-7e74-45a1-ab6c-89308c128ea6",
@@ -37,8 +37,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "051f22e1-c79f-491f-9d35-0dbb1a859c47",
@@ -55,8 +55,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "5aa3408a-9fa8-48e4-8602-e7e16f3eb9ae",
@@ -73,8 +73,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "669c6b55-2e40-48d1-b770-d16868ec4b23",
@@ -91,8 +91,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "e514aee5-6fb8-4595-9803-bc5c1af7a2c6",
@@ -109,8 +109,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "90a8bc45-765f-4226-93e6-fb8ccbe3447e",
@@ -127,8 +127,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "4cbd06cb-c035-411a-921b-f52b1c502154",
@@ -145,8 +145,8 @@
       "skills": [],
       "source": "verified_scrape",
       "discoveredAt": "2026-11-15T20:33:18.661Z",
-      "lastUpdatedAt": "2026-11-15T20:50:01.628Z",
-      "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+      "lastUpdatedAt": "2026-11-15T21:08:22.539Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     },
     {
       "id": "e02215df-9edf-40e2-a166-774354c18f6f",
@@ -71071,6 +71071,60 @@
       "discoveredAt": "2026-11-15T20:50:03.073Z",
       "lastUpdatedAt": "2026-11-15T20:50:03.073Z",
       "lastSyncJobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+    },
+    {
+      "id": "737d91ca-e571-41d2-b787-d79bd5256930",
+      "username": "tulip_towel_industries_p_1",
+      "fullName": "TULIP TOWEL INDUSTRIES PVT LTD",
+      "avatarUrl": null,
+      "profileUrl": "https://alumni.saylaniit.com/tulip_towel_industries_p_1",
+      "followers": 0,
+      "following": 0,
+      "verified": true,
+      "role": "recruiter",
+      "bio": null,
+      "location": null,
+      "skills": [],
+      "source": "verified_scrape",
+      "discoveredAt": "2026-11-15T21:08:23.194Z",
+      "lastUpdatedAt": "2026-11-15T21:08:23.194Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "601461b6-0200-4ca0-bdb3-6ac8794ffee1",
+      "username": "abc_company",
+      "fullName": "abc company",
+      "avatarUrl": "https://d2k6ufr83kdzmn.cloudfront.net/media/logo/6ac643c59d2a90a76b0befa9/b58a0bdc-5e0b-49ef-8f99-3e51a0022dfe.webp",
+      "profileUrl": "https://alumni.saylaniit.com/abc_company",
+      "followers": 0,
+      "following": 0,
+      "verified": true,
+      "role": "recruiter",
+      "bio": null,
+      "location": null,
+      "skills": [],
+      "source": "verified_scrape",
+      "discoveredAt": "2026-11-15T21:08:23.423Z",
+      "lastUpdatedAt": "2026-11-15T21:08:23.423Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "23c97407-ffda-44f9-97cb-80f68d3c27ae",
+      "username": "xyz",
+      "fullName": "xyz",
+      "avatarUrl": null,
+      "profileUrl": "https://alumni.saylaniit.com/xyz",
+      "followers": 0,
+      "following": 0,
+      "verified": true,
+      "role": "recruiter",
+      "bio": null,
+      "location": null,
+      "skills": [],
+      "source": "verified_scrape",
+      "discoveredAt": "2026-11-15T21:08:23.454Z",
+      "lastUpdatedAt": "2026-11-15T21:08:23.454Z",
+      "lastSyncJobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     }
   ],
   "snapshots": [
@@ -102403,9 +102457,134 @@
       "rankAtSnapshot": 28,
       "recordedAt": "2026-11-15T20:50:01.642Z",
       "jobId": "43145280-7eec-4edb-8916-5c6e8913ed97"
+    },
+    {
+      "id": "62d8f696-faec-41a0-97b1-d4222f46650c",
+      "alumniId": "4ebbe62c-dacd-430d-9a77-d661902a68f2",
+      "username": "wardadeveloper",
+      "followers": 4,
+      "following": 2,
+      "rankAtSnapshot": 103,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "accdf0f0-65a1-4185-bcff-5190d3895a23",
+      "alumniId": "b0de99b1-7e74-45a1-ab6c-89308c128ea6",
+      "username": "muhammad_ibrahim",
+      "followers": 0,
+      "following": 0,
+      "rankAtSnapshot": 2310,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "e2ed860b-ea2b-400e-8670-a144cca76da2",
+      "alumniId": "051f22e1-c79f-491f-9d35-0dbb1a859c47",
+      "username": "haniyaeshal416",
+      "followers": 4,
+      "following": 0,
+      "rankAtSnapshot": 66,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "333c2979-e02e-486e-8e71-f906af88178a",
+      "alumniId": "5aa3408a-9fa8-48e4-8602-e7e16f3eb9ae",
+      "username": "mvisionoffical",
+      "followers": 1,
+      "following": 0,
+      "rankAtSnapshot": 695,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "f478c032-c558-42e1-a555-36c5cfb455b3",
+      "alumniId": "669c6b55-2e40-48d1-b770-d16868ec4b23",
+      "username": "arishameraj2023",
+      "followers": 7,
+      "following": 1,
+      "rankAtSnapshot": 20,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "9725b6d3-2286-45cb-a170-08e81d22b800",
+      "alumniId": "e514aee5-6fb8-4595-9803-bc5c1af7a2c6",
+      "username": "chaudhryrania127",
+      "followers": 2,
+      "following": 0,
+      "rankAtSnapshot": 333,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "9cb092bf-3c67-48dd-b679-055cb1dbe224",
+      "alumniId": "90a8bc45-765f-4226-93e6-fb8ccbe3447e",
+      "username": "parveensafdar",
+      "followers": 9,
+      "following": 0,
+      "rankAtSnapshot": 13,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "d399dc36-8597-4796-9a75-0a379f929100",
+      "alumniId": "4cbd06cb-c035-411a-921b-f52b1c502154",
+      "username": "syedhunain",
+      "followers": 7,
+      "following": 8,
+      "rankAtSnapshot": 28,
+      "recordedAt": "2026-11-15T21:08:22.564Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "dd0d447c-a1d7-49e7-b8fd-0db3d7b4329c",
+      "alumniId": "737d91ca-e571-41d2-b787-d79bd5256930",
+      "username": "tulip_towel_industries_p_1",
+      "followers": 0,
+      "following": 0,
+      "rankAtSnapshot": 2971,
+      "recordedAt": "2026-11-15T21:08:23.459Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "75a18774-7ec7-4f85-8dd0-8d04834b75a3",
+      "alumniId": "601461b6-0200-4ca0-bdb3-6ac8794ffee1",
+      "username": "abc_company",
+      "followers": 0,
+      "following": 0,
+      "rankAtSnapshot": 1025,
+      "recordedAt": "2026-11-15T21:08:23.459Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
+    },
+    {
+      "id": "a917bc1b-121e-4423-b5f1-af93fbbf5712",
+      "alumniId": "23c97407-ffda-44f9-97cb-80f68d3c27ae",
+      "username": "xyz",
+      "followers": 0,
+      "following": 0,
+      "rankAtSnapshot": 3073,
+      "recordedAt": "2026-11-15T21:08:23.459Z",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278"
     }
   ],
   "jobs": [
+    {
+      "id": "276f4856-66fe-42f8-8d1b-53138a17e278",
+      "mode": "discover",
+      "status": "completed",
+      "totalTargets": 3,
+      "processedCount": 3,
+      "successCount": 3,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "throttleMs": 120,
+      "startedAt": "2026-11-15T21:08:22.605Z",
+      "finishedAt": "2026-11-15T21:08:23.490Z",
+      "currentTarget": null,
+      "errorMessage": null
+    },
     {
       "id": "43145280-7eec-4edb-8916-5c6e8913ed97",
       "mode": "discover",
@@ -102513,6 +102692,38 @@
     }
   ],
   "logs": [
+    {
+      "id": "0f460ab4-84f9-4c59-a02a-e70df1061a73",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278",
+      "level": "success",
+      "message": "Completed job: 3 succeeded, 0 failed, 0 skipped.",
+      "targetUrl": null,
+      "timestamp": "2026-11-15T21:08:23.490Z"
+    },
+    {
+      "id": "1580c954-8cb9-4b3a-be03-6068829fa51f",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278",
+      "level": "info",
+      "message": "Started public profile discovery for 3 profile(s) with 120ms wave throttling.",
+      "targetUrl": null,
+      "timestamp": "2026-11-15T21:08:22.613Z"
+    },
+    {
+      "id": "85996e69-8497-4159-9741-87c21342e847",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278",
+      "level": "success",
+      "message": "Extracted 8 active profiles from AlumniLink public feed.",
+      "targetUrl": "https://alumni.saylaniit.com/",
+      "timestamp": "2026-11-15T21:08:22.601Z"
+    },
+    {
+      "id": "f0f1c902-758f-4644-8fd9-6927d1f74bef",
+      "jobId": "276f4856-66fe-42f8-8d1b-53138a17e278",
+      "level": "info",
+      "message": "Inspecting public feed and sitemap.xml on alumni.saylaniit.com...",
+      "targetUrl": "https://alumni.saylaniit.com/sitemap.xml",
+      "timestamp": "2026-11-15T21:08:21.713Z"
+    },
     {
       "id": "a4b1c1a6-70db-4b2d-83db-c48e37d9bbe7",
       "jobId": "43145280-7eec-4edb-8916-5c6e8913ed97",
@@ -103304,7 +103515,7 @@
       "id": "admin-1",
       "username": "admin",
       "role": "superadmin",
-      "lastLoginAt": "2026-11-15T20:36:08.838Z"
+      "lastLoginAt": "2026-11-15T21:10:13.837Z"
     }
   ],
   "featuredUsernames": [
