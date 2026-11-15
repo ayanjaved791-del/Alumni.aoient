@@ -62,6 +62,7 @@ export function ProfileDetailView({
   }
 
   const { profile, history, totalTracked } = data;
+  const isCreator = profile.username.toLowerCase() === 'aoient';
 
   const chartData = history.map((snap) => ({
     date: new Date(snap.recordedAt).toLocaleString('en-US', {
@@ -132,7 +133,7 @@ export function ProfileDetailView({
               <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
                 <span className="font-mono text-zinc-800 dark:text-zinc-300">@{profile.username}</span>
                 <span aria-hidden="true">·</span>
-                <span>{profile.role}</span>
+                <span>{isCreator ? 'Creator' : profile.role}</span>
                 <span aria-hidden="true">·</span>
                 <span>
                   {profile.source === 'manual_entry'
@@ -161,8 +162,10 @@ export function ProfileDetailView({
           <div>
             <div className="text-xs text-zinc-500 dark:text-zinc-400">Current Rank</div>
             <div className="text-2xl font-display font-bold font-mono tabular-nums text-black dark:text-white mt-1">
-              #{profile.rank}
-              <span className="text-xs font-normal text-zinc-400 ml-1.5">/ {totalTracked.toLocaleString()}</span>
+              {isCreator ? 'Creator' : `#${profile.rank}`}
+              {!isCreator && (
+                <span className="text-xs font-normal text-zinc-400 ml-1.5">/ {totalTracked.toLocaleString()}</span>
+              )}
             </div>
           </div>
           <div>

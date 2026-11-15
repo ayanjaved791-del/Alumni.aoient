@@ -65,7 +65,14 @@ export function createApiApp(): express.Express {
 
   app.get('/api/leaderboard', (req, res) => {
     const allEntries = store.getLeaderboard();
-    const podium = allEntries.slice(0, 3);
+    const creatorEntry = allEntries.find((a) => a.username.toLowerCase() === 'aoient');
+    const nonCreatorEntries = creatorEntry
+      ? allEntries.filter((a) => a.username.toLowerCase() !== 'aoient')
+      : allEntries;
+
+    const podium = creatorEntry
+      ? [creatorEntry, ...nonCreatorEntries.slice(0, 2)]
+      : allEntries.slice(0, 3);
 
     const tier = String(req.query.tier || 'all');
     const search = String(req.query.search || '').trim().toLowerCase();
@@ -76,10 +83,12 @@ export function createApiApp(): express.Express {
     const page = Math.max(1, Number(req.query.page || 1));
     const pageSize = Math.min(100, Math.max(5, Number(req.query.pageSize || 20)));
 
-    let filtered = allEntries;
-    if (tier === 'top10') filtered = allEntries.slice(0, 10);
-    else if (tier === 'top50') filtered = allEntries.slice(0, 50);
-    else if (tier === 'top100') filtered = allEntries.slice(0, 100);
+    const isDefaultSort = sortBy === 'followers' && order === 'desc';
+
+    let filtered = isDefaultSort && creatorEntry ? [creatorEntry, ...nonCreatorEntries] : allEntries;
+    if (tier === 'top10') filtered = filtered.slice(0, 10);
+    else if (tier === 'top50') filtered = filtered.slice(0, 50);
+    else if (tier === 'top100') filtered = filtered.slice(0, 100);
 
     if (search) {
       filtered = filtered.filter(
@@ -103,6 +112,11 @@ export function createApiApp(): express.Express {
 
     const dir = order === 'asc' ? 1 : -1;
     filtered = [...filtered].sort((a, b) => {
+      if (isDefaultSort) {
+        const aIsCreator = a.username.toLowerCase() === 'aoient';
+        const bIsCreator = b.username.toLowerCase() === 'aoient';
+        if (aIsCreator !== bIsCreator) return aIsCreator ? -1 : 1;
+      }
       switch (sortBy) {
         case 'following':
           return ((a.following ?? -1) - (b.following ?? -1)) * dir;

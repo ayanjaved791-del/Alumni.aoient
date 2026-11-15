@@ -297,14 +297,24 @@ export function LeaderboardView({
                     </td>
                   </tr>
                 ) : (
-                  items.map((entry) => (
+                  items.map((entry) => {
+                    const isCreator = entry.username.toLowerCase() === 'aoient';
+                    return (
                     <tr
                       key={entry.username}
                       onClick={() => onSelectAlumni(entry.username)}
-                      className="group cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors"
+                      className={`group cursor-pointer transition-colors ${
+                        isCreator
+                          ? 'bg-zinc-50/80 dark:bg-zinc-800/30 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/50'
+                          : 'hover:bg-zinc-50 dark:hover:bg-zinc-800/40'
+                      }`}
                     >
                       <td className="py-3.5 pl-5 pr-3 font-mono tabular-nums font-semibold text-zinc-900 dark:text-zinc-200">
-                        #{entry.rank}
+                        {isCreator ? (
+                          <span className="text-black dark:text-white font-bold">Creator</span>
+                        ) : (
+                          `#${entry.rank}`
+                        )}
                       </td>
                       <td className="py-3.5 px-3">
                         <div className="flex items-center gap-3 min-w-0">
@@ -324,7 +334,7 @@ export function LeaderboardView({
                             <div className="text-xs text-zinc-500 dark:text-zinc-400 truncate flex items-center gap-1.5">
                               <span className="font-mono">@{entry.username}</span>
                               <span aria-hidden="true">·</span>
-                              <span>{entry.role}</span>
+                              <span>{isCreator ? 'Creator' : entry.role}</span>
                               {entry.source === 'manual_entry' && (
                                 <>
                                   <span aria-hidden="true">·</span>
@@ -357,7 +367,8 @@ export function LeaderboardView({
                         </a>
                       </td>
                     </tr>
-                  ))
+                    );
+                  })
                 )}
               </tbody>
             </table>

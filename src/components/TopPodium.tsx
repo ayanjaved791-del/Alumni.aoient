@@ -10,31 +10,30 @@ interface TopPodiumProps {
 export function TopPodium({ podium, onSelectAlumni }: TopPodiumProps) {
   if (podium.length === 0) return null;
 
-  const rankMeta: Record<number, { label: string; ring: string; orderClass: string; badgeColor: string }> = {
-    1: {
-      label: 'Rank #1 Leader',
+  const slotMeta: Array<{ ring: string; orderClass: string; badgeColor: string }> = [
+    {
       ring: 'border-black dark:border-white bg-white dark:bg-zinc-900',
       orderClass: 'lg:order-2 lg:-mt-3',
       badgeColor: 'text-black dark:text-white',
     },
-    2: {
-      label: 'Rank #2',
+    {
       ring: 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900',
       orderClass: 'lg:order-1',
       badgeColor: 'text-zinc-600 dark:text-zinc-400',
     },
-    3: {
-      label: 'Rank #3',
+    {
       ring: 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900',
       orderClass: 'lg:order-3',
       badgeColor: 'text-zinc-500 dark:text-zinc-500',
     },
-  };
+  ];
 
   return (
     <section aria-label="Top 3 AlumniLink Leaders" className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-end">
-      {podium.map((entry) => {
-        const meta = rankMeta[entry.rank] || rankMeta[3];
+      {podium.map((entry, idx) => {
+        const isCreator = entry.username.toLowerCase() === 'aoient';
+        const meta = slotMeta[idx] || slotMeta[2];
+        const label = isCreator ? 'Creator' : entry.rank === 1 ? 'Rank #1 Leader' : `Rank #${entry.rank}`;
         return (
           <article
             key={entry.username}
@@ -43,8 +42,8 @@ export function TopPodium({ podium, onSelectAlumni }: TopPodiumProps) {
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-2 text-xs font-medium text-zinc-600 dark:text-zinc-400">
                 <Award className={`w-4 h-4 ${meta.badgeColor}`} aria-hidden="true" />
-                <span className={`font-mono tabular-nums ${entry.rank === 1 ? 'text-black dark:text-white font-semibold' : ''}`}>
-                  {meta.label}
+                <span className={`font-mono tabular-nums ${idx === 0 || entry.rank === 1 ? 'text-black dark:text-white font-semibold' : ''}`}>
+                  {label}
                 </span>
               </div>
               <a
@@ -79,7 +78,7 @@ export function TopPodium({ podium, onSelectAlumni }: TopPodiumProps) {
                   )}
                 </div>
                 <p className="text-xs text-zinc-500 dark:text-zinc-400 font-mono truncate mt-0.5">
-                  @{entry.username} <span aria-hidden="true">·</span> {entry.role}
+                  @{entry.username} <span aria-hidden="true">·</span> {isCreator ? 'Creator' : entry.role}
                 </p>
               </div>
             </button>
